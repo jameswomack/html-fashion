@@ -18,14 +18,17 @@
     </style>
     <figure>
     <img alt="Fashion" src="http://a403.idata.over-blog.com/1/75/20/03/015/LOUIS-VUITTON-PRE-FALL-2013--2-.jpg" />
-    <figcaption>Annie Leibvitz</figcaption>
-    <h1>Louis Vuitton</h1>
+    <figcaption><content select="photog"></content></figcaption>
+    <h1><content select="brand"></content></h1>
     </figure>
   </template>
 </head>
 
 <body>
-  <div data-template="hf-full-photo"></div>
+  <layout data-template="hf-full-photo">
+    <brand>Louis Vuitton</brand>
+    <photog>Annie Leibovitz</photog>
+  </layout>
 </body>
 
 </html>

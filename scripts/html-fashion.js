@@ -1,7 +1,5 @@
-var querySelectorAll = document.querySelectorAll.bind(document);
-
-
 function $(selector){
+  var querySelectorAll = document.querySelectorAll.bind(document);
   return Array.prototype.slice.apply(querySelectorAll(selector));
 }
 
@@ -16,14 +14,16 @@ function dataAttrMapper(dataAttrName){
   };
 }
 
+function NodeMap(){ this.names = []; }
 
 $.ready(function(){
-  var sparseNodes = $('[data-template]'    ).reduce(dataAttrMapper('template'), {names:[]});
-  var templates   = $('template[data-name]').reduce(dataAttrMapper('name'    ), {names:[]});
+  var sparseNodes = $('layout[data-template]').reduce(dataAttrMapper('template'), new NodeMap());
+  var templates   = $('template[data-name]'  ).reduce(dataAttrMapper('name'    ), new NodeMap());
 
 
   sparseNodes.names.forEach(function(name){
-    var shadowRoot    = sparseNodes[name].createShadowRoot();
+    var container     = sparseNodes[name];
+    var shadowRoot    = container.createShadowRoot();
     var template      = templates[name];
     var templateClone = document.importNode(template.content, true);
 
