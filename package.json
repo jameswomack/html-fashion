@@ -1,0 +1,26 @@
+{
+  "name": "html-fashion",
+  "version": "1.0.0",
+  "description": "Shadow DOM Elements Inspired by High Fashion & Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameswomack/html-fashion.git"
+  },
+  "keywords": [
+    "shadow",
+    "dom",
+    "fashion",
+    "design",
+    "html"
+  ],
+  "author": "james@womack.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jameswomack/html-fashion/issues"
+  },
+  "homepage": "https://github.com/jameswomack/html-fashion#readme"
+}
